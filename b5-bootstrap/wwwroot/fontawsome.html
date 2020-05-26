@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="lib/fontawesome-free-5.13.0-web/css/fontawesome.css" rel="stylesheet" />
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/fontawesome-free-5.13.0-web/js/all.js"></script>
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+
+    <link href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@3/dark.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@9/dist/sweetalert2.min.js">
+
+                <script>
+                    $(document).ready(function () {
+                        $('textarea[name="ThongTinThem"]').summernote({
+                            height: 200
+                        });
+                });
+    </script>
+
+    
+</head>
+<body>
+    <div class="container">
+        <span class="fa fa-address-book"></span>
+        <span class="fa fa-3x fa-user"></span>
+
+
+
+    </div>
+
+    <form action="/Home/About" method="post">
+        <h2 class="text-center text-uppercase">
+            dang ky thanh vien
+
+
+        </h2>
+        <div class="row">
+            <div class="col-3 text-right">
+                ho ten
+            </div>
+            <div class="col-6">
+                <input class="form-control" name="HoTen" />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-3 text-right">
+                mat khau
+            </div>
+            <div class="col-6">
+                <input class="form-control" name="MatKhau" type="password" />
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-3 text-right">
+                Gioi Tinh
+            </div>
+            <div class="col-9">
+                <div class="form-check-inline">
+                    <input type="radio" name="GioiTinh" id="GTNu" value="0" checked="checked" class="form-check-input" />
+                    <label class="form-check-label" for="GTNu">Nu</label>
+
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="GioiTinh" id="GTNam" value="1" checked="checked" class="form-check-input" />
+                    <label class="form-check-label" for="GTNam">Nam</label>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-3 text-right">
+                So Thich
+            </div>
+            <div class="col-9">
+                <div class="form-check-inline">
+                    <input type="radio" name="SoThich" value="DL" checked="checked" class="form-check-input" />
+                    <label class="form-check-label" for="GTNu">Du Lich</label>
+
+                </div>
+                <div class="form-check-inline">
+                    <input type="radio" name="SoThich" value="DS" checked="checked" class="form-check-input" />
+                    <label class="form-check-label" for="GTNam">Doc Sach</label>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-3 text-right">
+                Tinh Thanh
+            </div>
+            <div class="col-6 form-group">
+                <select name="TinhThanh" class="form-control">
+                    <option value="HN">Ha Noi</option>
+                    <option value="SG">Sai Gon</option>
+                    <option value="CT">Can Tho</option>
+                    <option value="NT">Nha Trang</option>
+
+
+                </select>
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-3 text-right">
+                Hinh
+            </div>
+            <div class="col-6 form-group">
+                <input type="file" name="Hinh" required class="form-control" />
+
+            </div>
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-3 text-right">
+                Thong Tin Them
+            </div>
+            <div class="col-6">
+                <textarea name="ThongTinThem" rows="5" class="form-control">
+
+</textarea>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-12 text-center">
+                <button class="btn btn-primary">
+                    Dang Ky
+
+                </button>
+                <button class="btn btn-danger" type="reset">Nhap Lai</button>
+                
+            </div>
+            
+
+
+
+        </div>
+    </form>
+    <div class="col-9 text-center">
+        <button type="button" id="Demo">
+            sweetalert
+        </button>
+
+    </div>
+    
+</body>
+</html>
